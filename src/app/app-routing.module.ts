@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [];
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AuthGuard } from './services/auth.guard';
+import { DashAdminComponent } from './sistema/dashboard/dash-admin/dash-admin.component';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'recuperacao-de-senha', component: ResetPasswordComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', component: LayoutComponent, children: [
+    { path : 'usuario/painel-principal', component: DashAdminComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: 'usuario/painel-principal', pathMatch: 'full' }
+  ]}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

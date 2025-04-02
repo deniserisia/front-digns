@@ -8,9 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app-digns';
 
-  formAtual: 'login' | 'reset' | 'register' = 'login';
-
-  mostrarFormulario(tipo: 'login' | 'reset' | 'register') {
-    this.formAtual = tipo;
-  }
 }

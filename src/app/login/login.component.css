@@ -1,0 +1,141 @@
+:root {
+    --azul-escuro: #0b1f3a;
+    --azul-medio: #1f4e79;
+    --azul-claro: #3d8dd8;
+    --roxo-suave: #5a4e9d;
+    --verde-medico: #4bc18f;
+    --branco: #ffffff;
+    --cinza-claro: #dce3eb;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+body {
+    background: linear-gradient(135deg, var(--azul-escuro), var(--roxo-suave));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+    color: var(--branco);
+}
+  
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+  
+  .left-panel {
+    width: 40%;
+    padding-right: 40px;
+    color: var(--branco);
+  }
+  
+  .left-panel .logo {
+    margin-bottom: 40px;
+  }
+  
+  .left-panel .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .left-panel .logo h1 {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--branco);
+    color: #000;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #000;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-actions label {
+    font-size: 14px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--verde-medico);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #3aa77a;
+  }
+  
+  .links {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .links a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+  
+    .left-panel {
+      display: none;
+    }
+  }
+  
